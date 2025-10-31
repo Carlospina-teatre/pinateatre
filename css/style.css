@@ -1,0 +1,70 @@
+/* Estructura general */
+body {
+  margin: 0;
+  font-family: "Merriweather", serif;
+  background-color: #f5f2ef;
+  color: #2e2e2e;
+}
+
+/* Cabecera */
+header {
+  background-color: #62b1df;
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+  height: 70vh;
+  background: url("../img/escenario.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Intro */
+.intro {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Footer */
+footer {
+  background-color: #3b2e2a;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
