@@ -1,60 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Cuentos</title>
+  <meta charset="UTF-8">
+  <title>Cuentos | PiñaTeatre</title>
+  <style>
+    body {
+      font-family: "Merriweather", serif;
+      background-color: #f5f2ef;
+      color: #2e2e2e;
+      text-align: center;
+      padding: 60px;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      background-color: #62b1df;
+      padding: 15px 40px;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #4a93c4;
+    }
+  </style>
 </head>
+
 <body>
-
-    <!-- Aquí va tu menú -->
-    <nav>
-        <a href="#infantil-primaria">Infantil y Primaria</a>
-        <a href="#secundaria-mas">Secundaria y Más</a>
-        <a href="#english">English</a>
-    </nav>
-
-    <!-- Aquí van tus secciones -->
-    <div id="infantil-primaria" class="section">
-    <h2>Infantil y Primaria</h2>
-
-    <div class="cuentos-grid">
-
-        <div class="cuento">
-            <img src="imagenes/cuento1.jpg" alt="El osito dormilón">
-            <h3>El osito dormilón</h3>
-            <p>Un cuento tierno para acompañar a los más pequeños a dormir, lleno de dulzura y calma.</p>
-        </div>
-
-        <div class="cuento">
-            <img src="imagenes/cuento2.jpg" alt="Colores mágicos">
-            <h3>Colores mágicos</h3>
-            <p>Descubre los colores y aprende jugando con esta historia divertida y visual.</p>
-        </div>
-
-        <div class="cuento">
-            <img src="imagenes/cuento3.jpg" alt="La nube que quería ser mar">
-            <h3>La nube que quería ser mar</h3>
-            <p>Una historia poética sobre los sueños, el cambio y la imaginación.</p>
-        </div>
-
-        <div class="cuento">
-            <img src="imagenes/cuento4.jpg" alt="El bosque parlante">
-            <h3>El bosque parlante</h3>
-            <p>Un paseo mágico por un bosque donde los árboles cuentan historias antiguas.</p>
-        </div>
-
-    </div>
-</div>
-
-    <div id="secundaria-mas">
-        <h2>Secundaria y Más</h2>
-        <!-- Tus cuentos van aquí -->
-    </div>
-
-    <div id="english">
-        <h2>English</h2>
-        <!-- Tus cuentos van aquí -->
-    </div>
-
+  <h1>Cuentos</h1>
+  <div class="links">
+    <a href="infantil.html">Infantil y Primaria</a>
+    <a href="secundaria.html">Secundaria y Más</a>
+    <a href="english.html">English</a>
+  </div>
 </body>
 </html>

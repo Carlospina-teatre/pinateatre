@@ -1,3 +1,4 @@
+<style>
 /* Estructura general */
 body {
   margin: 0;
@@ -68,57 +69,48 @@ footer {
   text-align: center;
   padding: 1rem;
 }
-<style>
-    /* Tus estilos antiguos */
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
 
-    /* ... otros estilos que ya tienes ... */
+/* 👇 Aquí añadimos tus estilos para los cuentos */
+.section {
+    padding: 30px;
+    background-color: #f9f9f9;
+}
 
-    /* 🔽 Ahora pega aquí los nuevos estilos para los cuentos */
-    .section {
-        padding: 30px;
-        background-color: #f9f9f9;
-    }
+.section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
 
-    .section h2 {
-        text-align: center;
-        margin-bottom: 20px;
-        color: #333;
-    }
+.cuentos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
-    .cuentos-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
+.cuento {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 250px;
+    text-align: center;
+    padding: 15px;
+}
 
-    .cuento {
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        width: 250px;
-        text-align: center;
-        padding: 15px;
-    }
+.cuento img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
 
-    .cuento img {
-        width: 100%;
-        border-radius: 10px;
-        margin-bottom: 10px;
-    }
+.cuento h3 {
+    color: #444;
+    margin: 10px 0 5px;
+}
 
-    .cuento h3 {
-        color: #444;
-        margin: 10px 0 5px;
-    }
-
-    .cuento p {
-        font-size: 14px;
-        color: #666;
-    }
+.cuento p {
+    font-size: 14px;
+    color: #666;
+}
 </style>
