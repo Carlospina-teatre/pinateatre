@@ -114,3 +114,17 @@ footer {
     color: #666;
 }
 </style>
+
+/* LOGO */
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
