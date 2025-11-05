@@ -99,25 +99,34 @@ footer {
 
 .cuento img {
   display: block;
-  width: auto;
+  width: 100%;
   height: auto;
-  max-width: 100%;
-  max-height: 400px;
-  margin: 0 auto 20px auto;
+  max-height: none;
   border-radius: 10px;
-  background-color: #eaeaea;
-  object-fit: scale-down;
-  object-position: center;
+  margin: 0 auto 20px auto;
+}
+
+.cuento {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  text-align: justify;
 }
 
 .cuento h3 {
-    color: #444;
-    margin: 10px 0 5px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .cuento p {
-    font-size: 14px;
-    color: #666;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 /* LOGO */
 .logo a {
