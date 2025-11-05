@@ -99,15 +99,15 @@ footer {
 
 .cuento img {
   display: block;
-  max-width: 100%;
-  max-height: 320px;
   width: auto;
   height: auto;
+  max-width: 100%;
+  max-height: 400px;
   margin: 0 auto 20px auto;
   border-radius: 10px;
-  object-fit: contain;
-  object-position: center center;
   background-color: #eaeaea;
+  object-fit: scale-down;
+  object-position: center;
 }
 
 .cuento h3 {
