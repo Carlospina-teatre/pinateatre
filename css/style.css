@@ -1,18 +1,19 @@
-/* Estructura general */
+/* ✅ Tipografía general */
 body {
   margin: 0;
-  font-family: "Merriweather", serif;
+  font-family: "Nunito", sans-serif;
   background-color: #f5f2ef;
   color: #2e2e2e;
 }
 
-/* Cabecera */
+/* ✅ Cabecera */
 header {
   background-color: #62b1df;
   color: white;
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
+  z-index: 10;
 }
 
 nav {
@@ -25,6 +26,7 @@ nav h1 a {
   color: white;
   text-decoration: none;
   font-size: 1.8rem;
+  font-weight: 700;
 }
 
 nav ul {
@@ -38,14 +40,14 @@ nav ul {
 nav a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-/* Hero */
+/* ✅ Hero */
 .hero {
   height: 70vh;
   background: url("../img/escenario.jpg") center/cover no-repeat;
@@ -54,14 +56,14 @@ nav a:hover {
   justify-content: center;
 }
 
-/* Intro */
+/* ✅ Contenido general */
 .intro {
   padding: 4rem 2rem;
   max-width: 900px;
   margin: auto;
 }
 
-/* Footer */
+/* ✅ Footer */
 footer {
   background-color: #3b2e2a;
   color: white;
@@ -69,21 +71,15 @@ footer {
   padding: 1rem;
 }
 
-/* 👇 Aquí añadimos tus estilos para los cuentos */
+/* ✅ CUENTOS / ESPECTÁCULOS */
 .section {
-    padding: 30px;
-    background-color: #f9f9f9;
+  padding: 50px 20px;
+  background: #f9f9f9;
 }
 
-.section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-}
 .cuento {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 40px;
   background: #fff;
   border-radius: 10px;
@@ -94,7 +90,7 @@ footer {
   border-bottom: 4px solid #62b1df;
 }
 
-.cuento.invertida {
+.cuento.invertido {
   flex-direction: row-reverse;
 }
 
@@ -111,34 +107,25 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  display: block;
 }
 
 .cuento h3 {
   text-align: center;
-  color: #333;
   margin-bottom: 20px;
-}
-
-@media (max-width: 800px) {
-  .cuento {
-    flex-direction: column;
-  }
-  .cuento.invertida {
-    flex-direction: column;
-  }
-}
-
-/* LOGO */
-.logo a {
-  color: white;
-  text-decoration: none;
-  font-size: 2rem;
   font-weight: 700;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.hashtags {
+  text-align: center;
+  margin-top: 20px;
+  color: #62b1df;
+  font-size: 14px;
+  font-style: italic;
+}
+
+@media (max-width: 800px) {
+  .cuento,
+  .cuento.invertido {
+    flex-direction: column;
+  }
 }

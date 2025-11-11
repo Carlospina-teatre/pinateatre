@@ -3,141 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <title>Infantil y Primaria | PinaTeatre</title>
-  <style>
-    body { 
-      margin: 0; 
-      font-family: "Merriweather", serif; 
-      background: #f5f2ef; 
-      color: #2e2e2e; 
-    }
 
-    header { 
-      background: #62b1df; 
-      color: #fff; 
-      padding: 18px; 
-      text-align: center; 
-    }
-
-    header a { 
-      color: #fff; 
-      text-decoration: none; 
-      display: inline-block; 
-      margin-bottom: 6px; 
-    }
-
-    .section { 
-      padding: 50px 20px; 
-      background: #f9f9f9; 
-      min-height: 70vh; 
-    }
-
-    /* 🎨 Cuentos con imagen lateral */
-    .cuento {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 40px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      max-width: 1000px;
-      margin: 60px auto;
-      padding: 30px;
-      border-bottom: 4px solid #62b1df;
-    }
-
-    .cuento.invertida {
-      flex-direction: row-reverse;
-    }
-
-    .cuento .texto {
-      flex: 1;
-      text-align: justify;
-    }
-
-    .cuento .imagen {
-      flex: 1;
-    }
-
-    .cuento .imagen img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      display: block;
-    }
-
-    .cuento h3 {
-      text-align: center;
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    .cuento p { 
-      color: #555; 
-      font-size: 16px; 
-      line-height: 1.6; 
-      margin-bottom: 16px; 
-    }
-
-    @media (max-width: 800px) {
-      .cuento {
-        flex-direction: column;
-      }
-      .cuento.invertida {
-        flex-direction: column;
-      }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-  <header>
-    <a href="espectaculos.html">← Volver a Espectáculos</a>
-    <h1>Infantil y Primaria</h1>
-  </header>
 
-  <section class="section">
+<header>
+  <nav>
+    <h1 class="logo"><a href="index.html">Pina Teatre</a></h1>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="sobre.html">Sobre mí</a></li>
+      <li><a href="espectaculos.html">Espectáculos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <!-- 🎭 La Verdad sobre la Leyenda de San Jorge -->
-    <div class="cuento">
-      <div class="texto">
-        <h3>La Verdad sobre la Leyenda de San Jorge</h3>
-        <p>Teatralizamos la Leyenda de San Jorge a través de la narración, la música y la participación del público.</p>
-        <p>En nuestro cuento, la princesa no es una delicada muchacha, además Jorge, el "guerrero", es un chaval enganchado a las pantallas… 
-        El dragón, en cambio, es un ávido lector que no encuentra con quién compartir su pasión por la lectura, y decide hacer una parada en un pueblo con la esperanza de encontrar a alguien que disfrute leyendo tanto como él (una tarea nada fácil en estos tiempos…).</p>
-        <p>Pronto se gana la confianza de la princesa, una joven valiente, segura de sí misma y gran lectora. Pero, tristemente, el pueblo no lo recibe con la misma actitud, pues ven en él a alguien diferente.</p>
-        <p>Sin embargo, la amistad está por encima de todo…</p>
-      </div>
-      <div class="imagen">
-        <img src="imagenes/cuento8.jpg" alt="La Verdad sobre la Leyenda de San Jorge">
-      </div>
+<section class="section">
+
+  <!-- San Jorge -->
+  <div class="cuento">
+    <div class="texto">
+      <h3>La Verdad sobre la Leyenda de San Jorge</h3>
+      <p>Teatralizamos la Leyenda de San Jorge a través de la narración, la música y la participación del público.</p>
+      <p>En nuestro cuento, la princesa no es una delicada muchacha, además Jorge, el "guerrero", es un chaval enganchado a las pantallas… 
+      El dragón, en cambio, es un ávido lector que no encuentra con quién compartir su pasión por la lectura…</p>
+      <p>Pronto se gana la confianza de la princesa, valiente y gran lectora. 
+      El pueblo no lo recibe igual, pues ven en él a alguien diferente.</p>
+      <p>Sin embargo, la amistad está por encima de todo…</p>
+
+      <p class="hashtags">#SanJorge #LeyendaViva #Amistad #DíaDelLibro #Convivencia #TeatroInfantil #PinaTeatre</p>
     </div>
 
-    <!-- 🌍 África: origen del mundo a cuidar -->
-    <div class="cuento invertida">
-      <div class="texto">
-        <h3>África: origen del mundo a cuidar</h3>
-        <p>Tres historias, tres cuentos de origen africano que hablan de la importancia de cuidar el mundo, de respetar la fauna y la flora, y de la fuerza de los seres vivos, incluso los más pequeños, para conservar el medio ambiente.</p>
-        <p>Un pequeño colibrí que lleva agua gota a gota con su pico para apagar un incendio en el bosque, animando a todos los animales a que le ayuden; un niño que aprende una lección muy importante cuando está a punto de ser devorado por el cocodrilo Bambo, y un mito africano sobre por qué el sol y la luna viven en el cielo, serán los cuentos teatralizados que ayudarán a entender la importancia de cuidar el medio ambiente y a todos los seres vivos.</p>
-        <p>Cuentos participativos narrados con la ayuda de títeres, música e instrumentos tradicionales africanos.</p>
-      </div>
-      <div class="imagen">
-        <img src="imagenes/AFRICA2.jpg" alt="África: origen del mundo a cuidar">
-      </div>
+    <div class="imagen">
+      <img src="imagenes/cuento8.jpg" alt="La Verdad sobre la Leyenda de San Jorge">
+    </div>
+  </div>
+
+  <!-- África -->
+  <div class="cuento invertido">
+    <div class="texto">
+      <h3>África: origen del mundo a cuidar</h3>
+      <p>Tres cuentos africanos que hablan de la importancia de cuidar el medio ambiente y respetar la fauna y la flora.</p>
+      <p>Un pequeño colibrí que intenta apagar un incendio; un niño que aprende una valiosa lección frente al cocodrilo Bambo; y un mito sobre el sol y la luna…</p>
+      <p>Cuentos participativos narrados con títeres, música e instrumentos tradicionales.</p>
+
+      <p class="hashtags">#CuentosDeÁfrica #EducaciónAmbiental #TeatroEcológico #PinaTeatre</p>
     </div>
 
-    <!-- 💧 Gio y Julia -->
-    <div class="cuento">
-      <div class="texto">
-        <h3>Gio y Julia (o por qué Venecia está llena de canales)</h3>
-        <p>Venecia seca, pero dividida entre gentes del Norte y gentes del Sur. El odio reinaba entre los adultos, por eso, a los padres de Gio y Julia no les gustaba que sus hijos jugaran juntos.</p>
-        <p>Pero a ellos no les importaba, porque querían ser amigos. Después de encontrarlos juntos, la ira de los padres es tan grande que deciden tomar medidas que tendrían consecuencias fatales para la ciudad… pero muy buenas para sus habitantes más pequeños, porque no podrán evitar que pese a la inundación, Gio, Julia, y todos los niños y niñas, jueguen juntos.</p>
-        <p>Reinterpretación del clásico <em>Romeo y Julieta</em> (con final feliz), acompañada de música, danzas, títeres y juegos.</p>
-      </div>
-      <div class="imagen">
-        <img src="imagenes/GiJ1 ret.jpeg" alt="Gio y Julia (o por qué Venecia está llena de canales)">
-      </div>
+    <div class="imagen">
+      <img src="imagenes/AFRICA2.jpg" alt="África: origen del mundo a cuidar">
+    </div>
+  </div>
+
+  <!-- Gio y Julia -->
+  <div class="cuento">
+    <div class="texto">
+      <h3>Gio y Julia (o por qué Venecia está llena de canales)</h3>
+      <p>Venecia seca, dividida entre norte y sur. A los padres de Gio y Julia no les gusta que jueguen juntos…</p>
+      <p>Tras encontrarlos, la ira de los padres provoca consecuencias que cambiarán la ciudad, pero unirán a sus habitantes más pequeños.</p>
+      <p>Reinterpretación de Romeo y Julieta (con final feliz) con música, danzas y títeres.</p>
+
+      <p class="hashtags">#GioYJulia #TeatroInfantil #Venecia #PinaTeatre</p>
     </div>
 
-  </section>
+    <div class="imagen">
+      <img src="imagenes/GiJ1 ret.jpeg" alt="Gio y Julia">
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2025 Carlos Pina Gómez</p>
+</footer>
+
 </body>
 </html>

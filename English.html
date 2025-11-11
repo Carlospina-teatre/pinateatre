@@ -1,23 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>English | PinaTeatre</title>
+  <!-- Tipografía Nunito -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body{margin:0;font-family:"Merriweather",serif;background:#f5f2ef;color:#2e2e2e}
-    header{background:#62b1df;color:#fff;padding:18px;text-align:center}
-    header a{color:#fff;text-decoration:none;display:inline-block;margin-bottom:6px}
-    .section{padding:36px 18px;min-height:60vh}
-    .placeholder{text-align:center;color:#666}
+    body { 
+      margin:0; 
+      font-family:"Nunito", sans-serif; 
+      background:#f5f2ef; 
+      color:#2e2e2e; 
+    }
+
+    header { 
+      background:#62b1df; 
+      color:#fff; 
+      padding:18px; 
+      text-align:center; 
+    }
+
+    header a { 
+      color:#fff; 
+      text-decoration:none; 
+      display:inline-block; 
+      margin-bottom:6px; 
+    }
+
+    .section { 
+      padding:50px 20px; 
+      background:#f9f9f9; 
+      min-height:70vh; 
+    }
+
+    .cuento { 
+      background:#fff; 
+      border-radius:10px; 
+      box-shadow:0 4px 10px rgba(0,0,0,0.08); 
+      max-width:900px; 
+      margin:50px auto; 
+      padding:30px; 
+      text-align:justify; 
+      border-bottom:4px solid #62b1df;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:20px;
+    }
+
+    .cuento:last-child {
+      border-bottom:none;
+    }
+
+    .texto { 
+      flex:1 1 500px;
+    }
+
+    .imagen { 
+      flex:1 1 300px;
+      text-align:center;
+    }
+
+    .imagen img { 
+      width:100%; 
+      height:auto; 
+      border-radius:10px; 
+    }
+
+    .cuento h3 { 
+      text-align:center; 
+      margin-bottom:20px; 
+      color:#333; 
+    }
+
+    .cuento p { 
+      color:#555; 
+      font-size:16px; 
+      line-height:1.6; 
+      margin-bottom:16px; 
+    }
+
+    .hashtags {
+      text-align:center;
+      font-weight:600;
+      color:#62b1df;
+    }
+
+    .divider {
+      width:60%;
+      height:3px;
+      background:#62b1df;
+      margin:60px auto;
+      border-radius:2px;
+      opacity:0.3;
+    }
   </style>
 </head>
 <body>
   <header>
     <a href="espectaculos.html">← Back to Shows</a>
-    <h1>English</h1>
+    <h1>English Stories</h1>
   </header>
-  <div class="section">
-    <p class="placeholder">Stories in English coming soon. Here we'll add short tales and descriptions for English learners.</p>
-  </div>
+
+  <section class="section">
+
+    <!-- 🎭 The Three Little Pigs -->
+    <div class="cuento fila">
+      <div class="texto">
+        <h3>The Three Little Pigs</h3>
+        <p>
+          Charlie has arrived from New York to tell The Three Little Pigs. This classic story is perfect for young and older audiences, who can easily follow the narrative while practicing vocabulary such as numbers, colors, emotions, and materials.
+        </p>
+        <p>
+          We also explore musical styles like rock, rap, and electronic music, as each pig represents a different musical style. This encourages the audience to sing, dance, and enjoy the performance actively.
+        </p>
+        <p>
+          The story uses objects, puppets, and shadows to support storytelling and motivate audience participation in English.
+        </p>
+        <p class="hashtags">
+          #ThreeLittlePigs #EnglishStorytelling #Music #Participation #PinaTeatre
+        </p>
+      </div>
+      <div class="imagen">
+        <img src="imagenes/threepigs.jpg" alt="The Three Little Pigs">
+      </div>
+    </div>
+
+    <!-- 🎭 Pied Piper of Hamelin -->
+    <div class="cuento fila invertida">
+      <div class="texto">
+        <h3>Pied Piper of Hamelin</h3>
+        <p>
+          Charlie has arrived from New York to tell Pied Piper of Hamelin, a classic story that helps introduce music and wind instruments like accordion, flute, melodica, and more.
+        </p>
+        <p>
+          The tale emphasizes the importance of unity, obedience, and respect among citizens while practicing English vocabulary related to animals and their characteristics.
+        </p>
+        <p class="hashtags">
+          #PiedPiper #EnglishStorytelling #MusicEducation #Values #PinaTeatre
+        </p>
+      </div>
+      <div class="imagen">
+        <img src="imagenes/piedpiper.jpg" alt="Pied Piper of Hamelin">
+      </div>
+    </div>
+
+    <!-- 🎭 Pinocchio -->
+    <div class="cuento fila">
+      <div class="texto">
+        <h3>Pinocchio</h3>
+        <p>
+          Charlie has arrived from New York to tell Pinocchio. The classic story transforms into a participatory tale where the audience accompanies the little puppet on his journey towards responsibility, truth, and friendship.
+        </p>
+        <p>
+          Objects and symbolic elements represent the story actively, stimulating imagination and audience reconstruction of the narrative.
+        </p>
+        <p>
+          Themes include honesty, learning from mistakes, making good decisions, and caring for others, with English vocabulary practice related to emotions, actions, objects, and body parts.
+        </p>
+        <p>
+          The show combines humor, rhythm, live music, and participatory games, inviting everyone to sing, move, and enjoy a dynamic theatrical experience.
+        </p>
+        <p class="hashtags">
+          #Pinocchio #EnglishStorytelling #Values #Learning #Theatre #PinaTeatre
+        </p>
+      </div>
+      <div class="imagen">
+        <img src="imagenes/pinocchio.jpg" alt="Pinocchio">
+      </div>
+    </div>
+
+    <!-- 🎭 Little Red Riding Hood (al final) -->
+    <div class="cuento fila invertida">
+      <div class="texto">
+        <h3>Little Red Riding Hood</h3>
+        <p>
+          Charlie has arrived from New York to tell Little Red Riding Hood. The story uses costumes and objects to bring the tale to life, fostering imagination and creativity in the audience.
+        </p>
+        <p>
+          Music, including guitar, supports the storytelling while teaching English vocabulary and encouraging participation.
+        </p>
+        <p class="hashtags">
+          #LittleRedRidingHood #EnglishStorytelling #Imagination #Participation #PinaTeatre
+        </p>
+      </div>
+      <div class="imagen">
+        <img src="imagenes/littlered.jpg" alt="Little Red Riding Hood">
+      </div>
+    </div>
+
+  </section>
 </body>
 </html>
