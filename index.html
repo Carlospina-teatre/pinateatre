@@ -4,10 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PinaTeatre</title>
-
-  <!-- Fuente Nunito -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
-
   <style>
     body {
       margin: 0;
@@ -92,10 +89,10 @@
     }
 
     .video-side video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border: none;
+      width: 80%;        /* Reduce el tamaño */
+      max-width: 500px;  /* Tamaño máximo */
+      height: auto;      /* Mantiene la proporción */
+      border-radius: 10px; 
     }
 
     footer {
@@ -118,6 +115,11 @@
 
       .logo-side h1 {
         font-size: 3rem;
+      }
+
+      .video-side video {
+        width: 90%;
+        max-width: 400px;
       }
     }
   </style>
@@ -144,7 +146,7 @@
 
       <div class="video-side">
         <video controls>
-          <source src="videos/pinateatrereduc.mp4" type="video/mp4">
+          <source src="videos/pinateatre26.mp4" type="video/mp4">
           Tu navegador no soporta el vídeo.
         </video>
       </div>
