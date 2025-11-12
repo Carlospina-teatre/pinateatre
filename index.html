@@ -9,8 +9,8 @@
     body {
       margin: 0;
       font-family: 'Nunito', sans-serif;
-      background: #f5f2ef;
-      color: #2e2e2e;
+      background: #000; /* Fondo negro solo en index */
+      color: #fff;
     }
 
     header {
@@ -52,7 +52,6 @@
       justify-content: center;
       align-items: center;
       min-height: 80vh;
-      background: #f9f9f9;
     }
 
     .intro-split {
@@ -84,15 +83,15 @@
     }
 
     .logo-img {
-      max-width: 250px;
+      max-width: 200px;
       margin-bottom: 20px;
     }
 
     .video-side video {
-      width: 80%;        /* Reduce el tamaño */
-      max-width: 500px;  /* Tamaño máximo */
-      height: auto;      /* Mantiene la proporción */
-      border-radius: 10px; 
+      width: 95%;
+      max-width: 600px;
+      height: auto;
+      object-fit: contain;
     }
 
     footer {
@@ -118,8 +117,8 @@
       }
 
       .video-side video {
-        width: 90%;
-        max-width: 400px;
+        width: 95%;
+        max-width: 500px;
       }
     }
   </style>
@@ -145,8 +144,8 @@
       </div>
 
       <div class="video-side">
-        <video controls>
-          <source src="videos/pinateatre26.mp4" type="video/mp4">
+        <video autoplay muted controls>
+          <source src="videos/pinateatrereduc.mp4" type="video/mp4">
           Tu navegador no soporta el vídeo.
         </video>
       </div>
@@ -157,6 +156,5 @@
     <p>© 2025 Carlos Pina Gómez</p>
   </footer>
 
-  <script src="js/main.js"></script>
 </body>
 </html>
