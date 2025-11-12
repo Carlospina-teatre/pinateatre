@@ -9,8 +9,9 @@
     body {
       margin: 0;
       font-family: 'Nunito', sans-serif;
-      background: #f5f2ef;
-      color: #2e2e2e;
+      background: #000000; /* Fondo negro principal */
+      color: #ffffff;
+      font-size: 18px;
     }
 
     header {
@@ -18,6 +19,9 @@
       color: white;
       padding: 18px;
       text-align: center;
+      position: sticky; /* Fijo al hacer scroll */
+      top: 0;
+      z-index: 1000;
     }
 
     nav {
@@ -51,6 +55,27 @@
       padding: 50px 20px;
       max-width: 1200px;
       margin: auto;
+      position: relative;
+    }
+
+    /* Franjas laterales azules */
+    section::before,
+    section::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      width: 50px;
+      height: 100%;
+      background: #62b1df;
+      z-index: -1;
+    }
+
+    section::before {
+      left: 0;
+    }
+
+    section::after {
+      right: 0;
     }
 
     .cuento {
@@ -69,23 +94,24 @@
     }
 
     .cuento .texto h3 {
-      font-size: 1.8rem;
+      font-size: 2rem;
       margin-bottom: 15px;
       text-align: center;
-      color: #333;
+      color: #ffffff;
     }
 
     .cuento .texto p {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1.6;
       margin-bottom: 12px;
       text-align: justify;
+      color: #ffffff;
     }
 
     .cuento .texto .hashtags {
       margin-top: 10px;
-      font-size: 14px;
-      color: #555;
+      font-size: 16px;
+      color: #3da9fc; /* hashtags azules */
       text-align: center;
     }
 
@@ -111,6 +137,11 @@
       .cuento .imagen, .cuento .texto {
         width: 100%;
       }
+
+      section::before,
+      section::after {
+        display: none; /* Ocultar franjas en móvil */
+      }
     }
   </style>
 </head>
@@ -130,8 +161,22 @@
 
 <section>
 
-  <!-- San Jorge -->
+  <!-- Gio y Julia -->
   <div class="cuento">
+    <div class="texto">
+      <h3>Gio y Julia (o por qué Venecia está llena de canales)</h3>
+      <p>Venecia seca, dividida entre norte y sur. A los padres de Gio y Julia no les gusta que jueguen juntos…</p>
+      <p>Tras encontrarlos, la ira de los padres provoca consecuencias que cambiarán la ciudad, pero unirán a sus habitantes más pequeños.</p>
+      <p>Reinterpretación de Romeo y Julieta (con final feliz) con música, danzas y títeres.</p>
+      <p class="hashtags">#GioYJulia #TeatroInfantil #Venecia #PinaTeatre</p>
+    </div>
+    <div class="imagen">
+      <img src="imagenes/GiJ1 ret.jpeg" alt="Gio y Julia">
+    </div>
+  </div>
+
+  <!-- San Jorge -->
+  <div class="cuento invertido">
     <div class="texto">
       <h3>La Verdad sobre la Leyenda de San Jorge</h3>
       <p>Teatralizamos la Leyenda de San Jorge a través de la narración, la música y la participación del público.</p>
@@ -148,30 +193,16 @@
   </div>
 
   <!-- África -->
-  <div class="cuento invertido">
+  <div class="cuento">
     <div class="texto">
       <h3>África: origen del mundo a cuidar</h3>
       <p>Tres cuentos africanos que hablan de la importancia de cuidar el medio ambiente y respetar la fauna y la flora.</p>
       <p>Un pequeño colibrí que intenta apagar un incendio; un niño que aprende una valiosa lección frente al cocodrilo Bambo; y un mito sobre el sol y la luna…</p>
       <p>Cuentos participativos narrados con títeres, música e instrumentos tradicionales.</p>
-      <p class="hashtags">#CuentosDeÁfrica #EducaciónAmbiental #TeatroEcológico #PinaTeatre</p>
+      <p class="hashtags">#ecologia #EducaciónAmbiental #TeatroEcológico #PinaTeatre</p>
     </div>
     <div class="imagen">
       <img src="imagenes/AFRICA2.jpg" alt="África: origen del mundo a cuidar">
-    </div>
-  </div>
-
-  <!-- Gio y Julia -->
-  <div class="cuento">
-    <div class="texto">
-      <h3>Gio y Julia (o por qué Venecia está llena de canales)</h3>
-      <p>Venecia seca, dividida entre norte y sur. A los padres de Gio y Julia no les gusta que jueguen juntos…</p>
-      <p>Tras encontrarlos, la ira de los padres provoca consecuencias que cambiarán la ciudad, pero unirán a sus habitantes más pequeños.</p>
-      <p>Reinterpretación de Romeo y Julieta (con final feliz) con música, danzas y títeres.</p>
-      <p class="hashtags">#GioYJulia #TeatroInfantil #Venecia #PinaTeatre</p>
-    </div>
-    <div class="imagen">
-      <img src="imagenes/GiJ1 ret.jpeg" alt="Gio y Julia">
     </div>
   </div>
 
