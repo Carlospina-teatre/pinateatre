@@ -1,18 +1,21 @@
-/* ======== Refuerzo visual y estructura principal ======== */
+/* ======== Estructura principal ======== */
 body {
   margin: 0;
   font-family: 'Nunito', sans-serif;
   background: #f5f2ef;
   color: #2e2e2e;
-  font-size: 22px; /* tamaño de letra aumentado */
-  padding-bottom: 120px; /* espacio para footer fijo */
+  font-size: 22px;
+  padding-bottom: 220px; /* espacio para el footer fijo */
 }
 
+/* ======== HEADER ======== */
 header {
   background: #62b1df;
   color: white;
   padding: 35px;
   text-align: center;
+  z-index: 600;
+  position: relative;
 }
 
 nav {
@@ -26,7 +29,7 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
   margin: 0;
   padding: 0;
 }
@@ -35,125 +38,104 @@ nav a {
   color: white;
   text-decoration: none;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-main {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  min-height: 80vh !important;
-  background: #f9f9f9 !important;
-}
-
-/* ======== División mitad logo / mitad vídeo ======== */
-.intro-split {
-  display: flex;
-  width: 100%;
-  max-width: 1200px;
-  height: 80vh;
-  overflow: hidden;
-}
-
-.logo-side, .video-side {
-  flex: 1;
+/* ======== ICONOS PEGADOS AL HEADER ======== */
+.iconos-fondo-negro {
+  background-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+  width: 100%;
+  padding: 0;         /* evita franjas blancas */
+  margin: 0;
+  position: relative;
+  top: 0;
+  min-height: 50vh;   /* altura visible */
 }
 
-.logo-side {
-  background: #62b1df;
-  color: white;
-  text-align: center;
-}
-
-.logo-img {
-  width: 95%;       /* Ocupa casi todo el ancho del contenedor */
-  max-width: none;
-  height: auto;
-  border-radius: 50%; /* Bordes casi circulares */
-  object-fit: cover;  /* Centra y recorta si es necesario */
-  margin-bottom: 20px;
-}
-
-/* ======== Vídeo ======== */
-.video-side video {
-  display: block !important;
-  width: 100% !important;
-  height: 100% !important;
-  max-height: none !important;
-  object-fit: cover !important;
-  border: none !important;
-  background: black;
-}
-
-/* ======== Logos de espectáculos ======== */
 .show-logos {
   display: flex;
   justify-content: center;
-  gap: 100px;           /* Más espacio entre logos */
+  gap: 180px;         /* separación entre iconos */
   list-style: none;
-  padding: 60px 0;
   margin: 0;
+  padding: 40px 0;    /* espacio controlado, uniforme */
   align-items: center;
 }
 
 .show-logos li a img {
-  width: 200px;         /* Logos grandes */
-  height: 200px;
-  border-radius: 50%;   /* Logos circulares */
+  width: 500px;       /* ICONOS GRANDEEEES */
+  height: 500px;
+  border-radius: 50%;
   object-fit: cover;
   transition: transform 0.3s;
 }
 
 .show-logos li a img:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
-/* ======== Footer fijo en la parte inferior ======== */
+/* ======== FOOTER FIJO ABAJO ======== */
 footer {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  text-align: center;
-  padding: 20px;
-  background: #62b1df;
-  color: white;
+  background: #000;
   z-index: 1000;
-  box-shadow: 0 -3px 8px rgba(0,0,0,0.3); /* sombra opcional */
+  padding: 25px 0;
+  box-shadow: 0 -3px 8px rgba(0,0,0,0.3);
 }
 
-/* ======== Responsive ======== */
+.footer-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.footer-nav ul li a:hover {
+  color: #ffd700;
+}
+
+/* ======== RESPONSIVE ======== */
 @media (max-width: 900px) {
-  .intro-split {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .logo-side, .video-side {
-    width: 100%;
-    height: 50vh;
-  }
-
-  .logo-side h1 {
-    font-size: 3rem;
-  }
 
   .show-logos {
     flex-direction: column;
-    gap: 50px;
+    gap: 70px;
     padding: 40px 0;
   }
 
   .show-logos li a img {
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-nav ul {
+    flex-direction: column;
+    gap: 25px;
   }
 }
