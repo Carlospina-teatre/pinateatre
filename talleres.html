@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talleres | PinaTeatre</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      background: #000;
+      color: #fff;
+      font-size: 18px;
+      position: relative;
+    }
+
+    header {
+      background: #62b1df;
+      padding: 18px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .logo-header-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      vertical-align: middle;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ===== Talleres ===== */
+    .taller {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
+      padding: 20px 0;
+    }
+
+    .taller.invertido {
+      flex-direction: row-reverse;
+    }
+
+    .taller .imagen, .taller .texto {
+      flex: 1;
+    }
+
+    .taller .imagen img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .taller .imagen img:hover {
+      transform: scale(1.05);
+    }
+
+    .taller .texto h2 {
+      color: #62b1df;
+      font-size: 2.3rem; /* más grande */
+      font-weight: 800;  /* casi negrita */
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .taller .texto p {
+      margin-bottom: 12px;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    .taller .texto .meta {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .taller .texto .metodologia {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-top: 10px;
+    }
+
+    .taller .texto .punchline {
+      font-size: 1rem;
+      color: #62b1df;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .taller .texto .hashtags {
+      text-align: center;
+      color: #62b1df;
+      font-size: 0.95rem;
+      margin-top: 8px;
+    }
+
+    /* ===== Franjas laterales azules sólidas ===== */
+    main::before, main::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      width: 200px; /* más ancho */
+      height: 100%;
+      background: #62b1df;
+      z-index: 0;
+    }
+
+    main::before { left: 0; }
+    main::after { right: 0; }
+
+    @media (max-width: 900px) {
+      .taller, .taller.invertido {
+        flex-direction: column;
+      }
+
+      .taller .imagen, .taller .texto {
+        width: 100%;
+      }
+
+      main::before, main::after {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">
+      <img src="imagenes/logo2.jpg" alt="Pina Teatre Logo" class="logo-header-img" />
+    </a>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="sobre.html">Sobre mí</a></li>
+      <li><a href="espectaculos.html">Espectáculos</a></li>
+      <li><a href="talleres.html">Talleres</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- Taller 1: Imaginación y Teatro -->
+  <div class="taller invertido">
+    <div class="imagen">
+      <img src="imagenes/taller1.jpg" alt="Taller Imaginación y Teatro">
+    </div>
+    <div class="texto">
+      <h2>Imaginación y Teatro</h2>
+      <p class="punchline">Fomenta la creatividad y la expresión mediante ejercicios teatrales participativos.</p>
+      <p class="meta">Público: 6-12 años | Idioma: Castellano | Duración: variable según necesidad</p>
+      <p>Explora la imaginación de los niños y su capacidad para crear escenas mediante juegos teatrales. Se potencia la colaboración, comunicación y confianza grupal a través de actividades lúdicas y participativas.</p>
+      <p class="metodologia"><strong>Metodología:</strong> Calentamiento corporal y vocal, ejercicios de improvisación, creación escénica y puesta en común de escenas.</p>
+      <p class="hashtags">#Creatividad #Imaginación #ExpresiónCorporal #Colaboración #Confianza</p>
+    </div>
+  </div>
+
+  <!-- Taller 2: Lectura en voz alta -->
+  <div class="taller">
+    <div class="imagen">
+      <img src="imagenes/taller2.jpg" alt="Taller Lectura en voz alta">
+    </div>
+    <div class="texto">
+      <h2>Lectura en voz alta</h2>
+      <p class="punchline">Desarrolla la comprensión lectora y la expresión oral mediante la lectura colectiva.</p>
+      <p class="meta">Público: 12-18 años | Idioma: Castellano / Valencià | Duración: variable según necesidad</p>
+      <p>Mejora la expresión oral, comprensión lectora y confianza escénica. Se practican lecturas individuales y grupales, fomentando la escucha activa y la interpretación compartida.</p>
+      <p class="metodologia"><strong>Metodología:</strong> Calentamiento vocal, lectura individual y en grupo, dramatizaciones y análisis de expresividad.</p>
+      <p class="hashtags">#LecturaEnVozAlta #Comprensión #ExpresiónOral #Empatía #Confianza #Educación</p>
+    </div>
+  </div>
+
+  <!-- Taller 3: Poesía participativa -->
+  <div class="taller invertido">
+    <div class="imagen">
+      <img src="imagenes/taller3.jpg" alt="Taller Poesía participativa">
+    </div>
+    <div class="texto">
+      <h2>Poesía participativa</h2>
+      <p class="punchline">Explora la expresión personal y colectiva mediante la interpretación poética.</p>
+      <p class="meta">Público: Adultos y grupos diversos | Idioma: Castellano / English | Duración: variable según necesidad</p>
+      <p>Descubre la poesía mediante la recitación, interpretación y experimentación con ritmo, musicalidad y expresión corporal. Se fomenta la creatividad, colaboración y confianza escénica.</p>
+      <p class="metodologia"><strong>Metodología:</strong> Escucha activa, ejercicios de voz y cuerpo, actividades rítmicas y musicales, interpretación colectiva de poemas.</p>
+      <p class="hashtags">#Poesía #Expresión #Interpretación #Creatividad #Colaboración #ConfianzaEscénica</p>
+    </div>
+  </div>
+
+</main>
+
+</body>
+</html>

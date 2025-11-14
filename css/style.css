@@ -45,6 +45,20 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* ======== LOGO EN EL HEADER COMO HIPERVÍNCULO ======== */
+.logo-header-img {
+  width: 80px;          /* tamaño pequeño */
+  height: 80px;         /* mantiene proporción cuadrada */
+  border-radius: 50%;   /* completamente redondo */
+  object-fit: cover;    /* centra y recorta si hace falta */
+  vertical-align: middle;
+  transition: transform 0.3s;
+}
+
+.logo-header-img:hover {
+  transform: scale(1.1);
+}
+
 /* ======== ICONOS PEGADOS AL HEADER ======== */
 .iconos-fondo-negro {
   background-color: #000;
@@ -53,25 +67,25 @@ nav a:hover {
   align-items: center;
   flex-direction: row;
   width: 100%;
-  padding: 0;         /* evita franjas blancas */
+  padding: 0;
   margin: 0;
   position: relative;
   top: 0;
-  min-height: 50vh;   /* altura visible */
+  min-height: 50vh;
 }
 
 .show-logos {
   display: flex;
   justify-content: center;
-  gap: 180px;         /* separación entre iconos */
+  gap: 180px;
   list-style: none;
   margin: 0;
-  padding: 40px 0;    /* espacio controlado, uniforme */
+  padding: 40px 0;
   align-items: center;
 }
 
 .show-logos li a img {
-  width: 500px;       /* ICONOS GRANDEEEES */
+  width: 500px;
   height: 500px;
   border-radius: 50%;
   object-fit: cover;

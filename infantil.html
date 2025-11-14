@@ -6,14 +6,12 @@
   <title>Infantil y Primaria | PinaTeatre</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* --- GENERAL --- */
     body {
       margin: 0;
       font-family: 'Nunito', sans-serif;
       background: #000000;
       color: #ffffff;
       font-size: 18px;
-      position: relative;
     }
 
     header {
@@ -32,6 +30,15 @@
       align-items: center;
       max-width: 1100px;
       margin: 0 auto;
+    }
+
+    /* Logo solo como imagen */
+    .logo-header-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      vertical-align: middle;
     }
 
     nav ul {
@@ -53,39 +60,18 @@
       text-decoration: underline;
     }
 
-    /* --- SECCIÓN PRINCIPAL --- */
     section {
       padding: 50px 20px;
       max-width: 1200px;
       margin: auto;
-      position: relative;
-      background: transparent;
-      z-index: 1;
+      background: linear-gradient(to bottom, #62b1df 0%, #000000 100%);
     }
 
-    /* Franjas laterales */
-    section::before,
-    section::after {
-      content: "";
-      position: fixed;
-      top: 0;
-      width: 100px;
-      height: 100%;
-      background: linear-gradient(to bottom, #62b1df, #000000);
-      z-index: 0;
-    }
-
-    section::before { left: 0; }
-    section::after { right: 0; }
-
-    /* --- CUENTOS --- */
     .cuento {
       display: flex;
       align-items: center;
       gap: 30px;
       margin: 60px 0;
-      position: relative;
-      z-index: 2;
     }
 
     .cuento.invertido {
@@ -100,7 +86,7 @@
       font-size: 2rem;
       margin-bottom: 15px;
       text-align: center;
-      color: #62b1df;
+      color: #ffffff;
     }
 
     .cuento .texto p {
@@ -122,23 +108,12 @@
       width: 100%;
       height: auto;
       display: block;
-      border-radius: 0;
     }
 
-    /* Imagen de Gio y Julia más pequeña */
     .cuento.gio-julia .imagen img {
       width: 85%;
       margin: 0 auto;
       display: block;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #62b1df;
-      color: white;
-      position: relative;
-      z-index: 3;
     }
 
     @media (max-width: 900px) {
@@ -149,11 +124,6 @@
       .cuento .imagen, .cuento .texto {
         width: 100%;
       }
-
-      section::before,
-      section::after {
-        display: none;
-      }
     }
   </style>
 </head>
@@ -161,11 +131,14 @@
 
 <header>
   <nav>
-    <h1 class="logo"><a href="index.html">Pina Teatre</a></h1>
+    <a href="index.html">
+      <img src="imagenes/logo2.jpg" alt="Pina Teatre Logo" class="logo-header-img" />
+    </a>
     <ul>
       <li><a href="index.html">Inicio</a></li>
       <li><a href="sobre.html">Sobre mí</a></li>
       <li><a href="espectaculos.html">Espectáculos</a></li>
+      <li><a href="talleres.html">Talleres</a></li>
       <li><a href="contacto.html">Contacto</a></li>
     </ul>
   </nav>
@@ -173,7 +146,6 @@
 
 <section>
 
-  <!-- 🐉 San Jorge -->
   <div class="cuento">
     <div class="texto">
       <h3>La Verdad sobre la Leyenda de San Jorge</h3>
@@ -190,7 +162,6 @@
     </div>
   </div>
 
-  <!-- 🎭 Gio y Julia -->
   <div class="cuento gio-julia invertido">
     <div class="texto">
       <h3>Gio y Julia (o por qué Venecia está llena de canales)</h3>
@@ -204,7 +175,6 @@
     </div>
   </div>
 
-  <!-- 🌍 África -->
   <div class="cuento">
     <div class="texto">
       <h3>África: origen del mundo a cuidar</h3>
@@ -219,10 +189,6 @@
   </div>
 
 </section>
-
-<footer>
-  <p>© 2025 Carlos Pina Gómez</p>
-</footer>
 
 </body>
 </html>
