@@ -72,19 +72,16 @@ main {
   text-align: center;
 }
 
-.logo-side h1 {
-  font-size: 4rem;
-  line-height: 1.1;
-  margin: 0;
-  font-weight: 800;
-}
-
 .logo-img {
-  max-width: 250px;
+  width: 95%;       /* Ocupa casi todo el ancho del contenedor */
+  max-width: none;
+  height: auto;
+  border-radius: 50%; /* Bordes casi circulares */
+  object-fit: cover;  /* Centra y recorta si es necesario */
   margin-bottom: 20px;
 }
 
-/* ======== Aseguramos que el vídeo se vea correctamente ======== */
+/* ======== Vídeo ======== */
 .video-side video {
   display: block !important;
   width: 100% !important;
@@ -102,6 +99,27 @@ footer {
   color: white;
 }
 
+/* ======== Logos de espectáculos ======== */
+.show-logos {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  gap: 40px;               /* Espacio entre logos */
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.show-logos li a img {
+  width: 200px;        /* Ajusta al tamaño deseado */
+  height: auto;
+  border-radius: 15px; /* Bordes ligeramente redondeados */
+  transition: transform 0.3s;
+}
+
+.show-logos li a img:hover {
+  transform: scale(1.05); /* Efecto al pasar el cursor */
+}
+
 @media (max-width: 900px) {
   .intro-split {
     flex-direction: column;
@@ -115,5 +133,15 @@ footer {
 
   .logo-side h1 {
     font-size: 3rem;
+  }
+
+  .show-logos {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .show-logos li a img {
+    width: 60%;
+    max-width: 300px;
   }
 }

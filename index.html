@@ -70,15 +70,19 @@
     }
 
     .logo-side {
-      background: #62b1df;
-      color: white;
-      text-align: center;
-    }
+  background: #62b1df;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    .logo-img {
-      max-width: 200px;
-      margin-bottom: 20px;
-    }
+.logo-side .logo-img {
+  width: 125%;       /* Ocupa casi todo el ancho del contenedor */
+  max-width: none;  /* Sin límite */
+  height: auto;     /* Mantiene proporción */
+  border-radius: 50%; /* Bordes completamente redondeados */
+  object-fit: cover;  /* Mantiene la imagen centrada y recortada si es necesario */
+}
 
     .video-side video {
       width: 95%;
@@ -128,7 +132,7 @@
   <main>
     <section class="intro-split">
       <div class="logo-side">
-        <img src="imagenes/logo.jpg" alt="Pina Teatre Logo" class="logo-img" />
+        <img src="imagenes/logo2.jpg" alt="Pina Teatre Logo" class="logo-img" />
         <!-- Texto eliminado para evitar duplicado -->
       </div>
 
