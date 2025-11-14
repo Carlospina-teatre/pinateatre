@@ -5,6 +5,7 @@ body {
   background: #f5f2ef;
   color: #2e2e2e;
   font-size: 22px; /* tamaño de letra aumentado */
+  padding-bottom: 120px; /* espacio para footer fijo */
 }
 
 header {
@@ -92,37 +93,44 @@ main {
   background: black;
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #62b1df;
-  color: white;
-}
-
 /* ======== Logos de espectáculos ======== */
 .show-logos {
   display: flex;
-  justify-content: center; /* Centra los logos */
-  gap: 60px;               /* Espacio entre los logos */
+  justify-content: center;
+  gap: 100px;           /* Más espacio entre logos */
   list-style: none;
-  padding: 40px 0;
+  padding: 60px 0;
   margin: 0;
   align-items: center;
-  background-color: #000;  /* Franja negra debajo de los logos */
 }
 
 .show-logos li a img {
-  width: 155px;             /* Logos más grandes (+5px) */
-  height: 155px;
-  border-radius: 50%;       /* Logos circulares */
-  object-fit: cover;        
+  width: 200px;         /* Logos grandes */
+  height: 200px;
+  border-radius: 50%;   /* Logos circulares */
+  object-fit: cover;
   transition: transform 0.3s;
 }
 
 .show-logos li a img:hover {
-  transform: scale(1.1);   /* Efecto hover */
+  transform: scale(1.1);
 }
 
+/* ======== Footer fijo en la parte inferior ======== */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background: #62b1df;
+  color: white;
+  z-index: 1000;
+  box-shadow: 0 -3px 8px rgba(0,0,0,0.3); /* sombra opcional */
+}
+
+/* ======== Responsive ======== */
 @media (max-width: 900px) {
   .intro-split {
     flex-direction: column;
@@ -140,11 +148,12 @@ footer {
 
   .show-logos {
     flex-direction: column;
-    gap: 30px;
+    gap: 50px;
+    padding: 40px 0;
   }
 
   .show-logos li a img {
-    width: 125px;           /* Tamaño responsivo */
-    height: 125px;
+    width: 150px;
+    height: 150px;
   }
 }
