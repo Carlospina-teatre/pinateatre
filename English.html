@@ -77,14 +77,22 @@
       text-align: center;
       font-weight: 600;
     }
-    img { width: 100%; height: auto; display: block; }
+    .imagen img {
+      width: 80%; /* Imagen de Pinocchio más pequeña */
+      height: auto;
+      display: block;
+      margin: auto;
+    }
     footer {
       text-align: center;
       padding: 20px;
       background: #62b1df;
       color: white;
     }
-    @media(max-width:900px){ .cuento, .cuento.invertido{ flex-direction:column; } }
+    @media(max-width:900px){
+      .cuento, .cuento.invertido{ flex-direction:column; }
+      .imagen img { width: 100%; }
+    }
   </style>
 </head>
 <body>
@@ -104,7 +112,6 @@
 </header>
 
 <section>
-
   <!-- 🎭 The Three Little Pigs -->
   <div class="cuento">
     <div class="texto">
@@ -142,10 +149,22 @@
       <p class="hashtags">#Pinocchio #EnglishStorytelling #Values #Learning #Theatre #PinaTeatre</p>
     </div>
     <div class="imagen">
-      <img style="width:60%; margin:auto; display:block;" src="imagenes/pinocchio2.jpg" alt="Pinocchio">
+      <img src="imagenes/pinocchio2.jpg" alt="Pinocchio">
     </div>
   </div>
 
+  <!-- 🎭 Little Red Riding Hood -->
+  <div class="cuento invertido">
+    <div class="texto">
+      <h3>Little Red Riding Hood</h3>
+      <p>Charlie tells Little Red Riding Hood using costumes and objects that bring the story to life, fostering creativity.</p>
+      <p>Music, including guitar, supports storytelling and encourages English participation.</p>
+      <p class="hashtags">#LittleRedRidingHood #EnglishStorytelling #Imagination #Participation #PinaTeatre</p>
+    </div>
+    <div class="imagen">
+      <img src="imagenes/littlered.jpg" alt="Little Red Riding Hood">
+    </div>
+  </div>
 </section>
 
 <footer>
