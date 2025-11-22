@@ -153,3 +153,16 @@ footer {
     gap: 25px;
   }
 }
+/* ===== FOOTER ===== */
+footer {
+  margin-top: 50px;
+}
+
+.footer-bar {
+  background: #62b1df; /* Azul PinaTeatre */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-weight: 600;
+  font-size: 18px;
+}
