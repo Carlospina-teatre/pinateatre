@@ -34,23 +34,28 @@ nav ul {
   padding: 0;
 }
 
+/* ===== TIPOGRAFÍA ESTILOSA PARA EL NAV ===== */
 nav a {
+  font-family: 'Montserrat', sans-serif; /* negrita y elegante */
+  font-weight: 700;        
   color: white;
   text-decoration: none;
-  font-weight: 700;
   font-size: 18px;
+  letter-spacing: 1px;     
+  transition: color 0.3s, transform 0.3s;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #ffd700;          
+  transform: scale(1.05);  
 }
 
-/* ======== LOGO EN EL HEADER COMO HIPERVÍNCULO ======== */
+/* ======== LOGO EN EL HEADER COMO HIPERVÍNCULO ===== */
 .logo-header-img {
-  width: 80px;          /* tamaño pequeño */
-  height: 80px;         /* mantiene proporción cuadrada */
-  border-radius: 50%;   /* completamente redondo */
-  object-fit: cover;    /* centra y recorta si hace falta */
+  width: 80px;          
+  height: 80px;         
+  border-radius: 50%;   
+  object-fit: cover;    
   vertical-align: middle;
   transition: transform 0.3s;
 }
@@ -59,7 +64,7 @@ nav a:hover {
   transform: scale(1.1);
 }
 
-/* ======== ICONOS PEGADOS AL HEADER ======== */
+/* ======== ICONOS PEGADOS AL HEADER ===== */
 .iconos-fondo-negro {
   background-color: #000;
   display: flex;
@@ -96,7 +101,7 @@ nav a:hover {
   transform: scale(1.15);
 }
 
-/* ======== FOOTER FIJO ABAJO ======== */
+/* ======== FOOTER FIJO ABAJO ===== */
 footer {
   position: fixed;
   bottom: 0;
@@ -153,6 +158,7 @@ footer {
     gap: 25px;
   }
 }
+
 /* ===== FOOTER ===== */
 footer {
   margin-top: 50px;
