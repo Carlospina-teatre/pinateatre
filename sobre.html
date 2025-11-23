@@ -3,11 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <title>Sobre mí | PinaTeatre</title>
-
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      background: #000;
+      color: #fff;
+      line-height: 1.7;
+    }
 
+    header {
+      background: #62b1df;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section.intro {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 30px 20px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+
+    section.intro h2 {
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #62b1df;
+    }
+
+    section.intro p {
+      font-size: 1.1rem;
+      margin-bottom: 18px;
+      text-align: justify;
+    }
+
+    .sobre-mi-img {
+      display: block;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin: 0 auto 30px;
+      object-fit: cover;
+      border: 4px solid #62b1df;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #aaa;
+    }
+
+    footer a.logo-footer {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+    }
+
+    footer a.logo-footer img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+  </style>
+</head>
 <body>
 
 <header>
@@ -23,17 +109,15 @@
 </header>
 
 <section class="intro">
+  <img src="imagenes/perfil.jpg" alt="Carlos Pina Gómez" class="sobre-mi-img">
   <h2>Sobre mí</h2>
-
-  <p>Alacantí de nacimiento cuento para todos los públicos. El cuento es teatro, nuestra esencia como seres humanos.</p>
-
-  <p>Cuento en tres idiomas: castellano, valencià and English, siendo el entretenimiento el pilar fundamental que sostiene el cuento.</p>
-
-  <p>La andadura PinaTeatre comenzó en el 2016 habiendo colaborado desde 2006 con compañías de teatro tanto infantil como adulto.</p>
+  <p>Contar historias es revelar la esencia de nuestra humanidad. A veces olvidada una vez que crecemos. Pero sentarnos en una sala rodeados de otros seres humanos para ver, es un acto colectivo que debemos preservar con mimo.</p>
+  <p>Con mimo, cuidado y atención creamos nuestros espectáculos, para niños y no tanto, si alguna vez dejamos de serlo.</p>
+  <p>Soy Alacantí de nacimiento. He vivido en Amsterdam, Barcelona y Londres, durante por lo menos tres años en cada ciudad. Desde adolescente entreno como actor y trabajo frente a un público. Además, en mi periplo, he estudiado Historia del Arte, el Máster en Educación Secundaria, y después: Arte Dramático, especialidad en Dirección Escénica y Dramaturgia.</p>
 </section>
 
 <footer>
-  <p>© 2025 Carlos Pina Gómez</p>
+  <a href="index.html" class="logo-footer"><img src="imagenes/logo2.jpg" alt="Pina Teatre Logo"></a>
 </footer>
 
 </body>
