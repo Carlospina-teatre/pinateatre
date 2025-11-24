@@ -1,22 +1,264 @@
-<form id="contact-form" action="https://formspree.io/f/xqaoqbpk" method="POST">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | PinaTeatre</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ======== BODY ======== */
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      background: #f5f2ef;
+      color: #2e2e2e;
+      font-size: 18px;
+      overflow-x: hidden;
+    }
 
-  <input type="text" name="nombre" placeholder="Tu nombre" required>
-  <input type="email" name="email" placeholder="Tu correo electrónico" required>
-  <textarea name="mensaje" rows="6" placeholder="Escribe tu mensaje..." required></textarea>
+    /* ======== HEADER ======== */
+    header {
+      background: #62b1df;
+      color: white;
+      padding: 25px;
+      text-align: center;
+      position: relative;
+    }
 
-  <button type="submit">Enviar</button>
-</form>
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
-<!-- Mensaje personalizado (oculto hasta que se envía el formulario) -->
-<p id="form-success" style="
-  display:none;
-  margin-top:30px;
-  text-align:center;
-  font-size:20px;
-  color:#4a93c4;
-  font-weight:700;">
-  ¡Muchas gracias! Pronto nos pondremos en contacto.
-</p>
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      letter-spacing: 1px;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+      transform: scale(1.05);
+    }
+
+    .logo-header-img {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .logo-header-img:hover {
+      transform: scale(1.1);
+    }
+
+    /* ======== CONTACTO FULLSCREEN ======== */
+    .contacto-section {
+      width: 100%;
+      height: calc(100vh - 160px); /* altura disponible: pantalla - header - footer */
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; /* alineado al inicio para elevar círculo */
+      background: #000;
+      box-sizing: border-box;
+      padding-top: 60px; /* espacio superior */
+    }
+
+    .contacto-circulo {
+      background: white;
+      width: 70vw;
+      max-width: 600px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      padding: 40px;
+      box-shadow: 0 0 35px rgba(0,0,0,0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: all 0.5s ease;
+      transform: translateY(-30px); /* lo elevamos */
+    }
+
+    .contacto-circulo h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #2e2e2e;
+      font-weight: 700;
+    }
+
+    .contacto-form {
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contacto-form label {
+      font-weight: 600;
+      text-align: left;
+      font-size: 16px;
+    }
+
+    .contacto-form input,
+    .contacto-form textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 2px solid #62b1df;
+      border-radius: 12px;
+      font-size: 16px;
+      font-family: 'Nunito', sans-serif;
+      resize: none;
+    }
+
+    .contacto-form textarea {
+      height: 120px;
+    }
+
+    .btn-enviar {
+      margin-top: 10px;
+      background: #62b1df;
+      color: white;
+      border: none;
+      padding: 14px;
+      font-size: 18px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: transform 0.2s, background 0.3s;
+    }
+
+    .btn-enviar:hover {
+      background: #4ea1d3;
+      transform: scale(1.05);
+    }
+
+    /* ======== FOOTER FIJO ======== */
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #62b1df;
+      z-index: 1000;
+      padding: 20px 0;
+      box-shadow: 0 -3px 8px rgba(0,0,0,0.25);
+    }
+
+    .footer-nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .footer-nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    .footer-nav ul li a:hover {
+      color: #ffd700;
+    }
+
+    /* ======== RESPONSIVE ======== */
+    @media(max-width: 900px) {
+      .contacto-circulo {
+        width: 80vw;
+        height: 80vw;
+        padding: 30px;
+        transform: translateY(-20px);
+      }
+
+      .contacto-form {
+        max-width: 90%;
+      }
+
+      .contacto-form textarea {
+        height: 100px;
+      }
+    }
+
+    @media(max-width: 650px) {
+      .contacto-circulo {
+        width: 90vw;
+        height: auto;
+        border-radius: 30px;
+        padding: 25px;
+        transform: translateY(-15px);
+      }
+
+      .contacto-form textarea {
+        height: 90px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">
+      <img src="imagenes/logo2.jpg" alt="Pina Teatre Logo" class="logo-header-img" />
+    </a>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="sobre.html">Sobre mí</a></li>
+      <li><a href="espectaculos.html">Espectáculos</a></li>
+      <li><a href="talleres.html">Talleres</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="contacto-section">
+  <div class="contacto-circulo" id="contacto-circulo">
+    <form id="contact-form" action="https://formspree.io/f/xqaoqbpk" method="POST" class="contacto-form">
+      <label for="email">Tu email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Tu mensaje:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit" class="btn-enviar">Enviar</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <nav class="footer-nav">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="sobre.html">Sobre mí</a></li>
+      <li><a href="espectaculos.html">Espectáculos</a></li>
+      <li><a href="talleres.html">Talleres</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</footer>
 
 <script>
 document.getElementById("contact-form").addEventListener("submit", async (e) => {
@@ -32,10 +274,14 @@ document.getElementById("contact-form").addEventListener("submit", async (e) => 
   });
 
   if (response.ok) {
-    form.style.display = "none";
-    document.getElementById("form-success").style.display = "block";
+    const circulo = document.getElementById("contacto-circulo");
+    circulo.innerHTML = `<h2>¡Muchas gracias!</h2>
+                         <p>Pronto nos pondremos en contacto.</p>`;
   } else {
     alert("Hubo un problema al enviar el formulario. Inténtalo de nuevo.");
   }
 });
 </script>
+
+</body>
+</html>

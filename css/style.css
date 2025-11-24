@@ -4,7 +4,7 @@ body {
   font-family: 'Nunito', sans-serif;
   background: #f5f2ef;
   color: #2e2e2e;
-  font-size: 18px; /* Antes 22px → ahora tamaño base óptimo */
+  font-size: 18px; /* Tamaño base óptimo */
   padding-bottom: 180px; /* espacio para el footer fijo */
 }
 
@@ -52,7 +52,7 @@ nav a:hover {
 
 /* ======== LOGO EN EL HEADER COMO HIPERVÍNCULO ===== */
 .logo-header-img {
-  width: 65px;     /* Antes 80px */
+  width: 65px;     
   height: 65px;
   border-radius: 50%;
   object-fit: cover;
@@ -82,7 +82,7 @@ nav a:hover {
 .show-logos {
   display: flex;
   justify-content: center;
-  gap: 120px; /* un poco menos para equilibrio visual */
+  gap: 120px;
   list-style: none;
   margin: 0;
   padding: 40px 0;
@@ -92,9 +92,9 @@ nav a:hover {
 /* ======== IMÁGENES DE ESPECTÁCULOS RESPONSIVAS ===== */
 .show-logos li a img {
   width: 100%;
-  max-width: 350px;  /* Antes 500px → mucho más manejable */
-  aspect-ratio: 1 / 1;
-  height: auto;      /* Mantiene círculo perfecto */
+  max-width: 350px; /* antes 500px → mucho más manejable */
+  aspect-ratio: 1 / 1; /* mantiene círculo perfecto */
+  height: auto;        /* ajusta altura automáticamente */
   border-radius: 50%;
   object-fit: cover;
   transition: transform 0.3s;
@@ -104,16 +104,23 @@ nav a:hover {
   transform: scale(1.12);
 }
 
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .show-logos li a img {
+    max-width: 220px;
+  }
+}
+
 /* ======== FOOTER FIJO ABAJO ===== */
 footer {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #000;
+  background: #62b1df;
   z-index: 1000;
   padding: 20px 0;
-  box-shadow: 0 -3px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 -3px 8px rgba(0,0,0,0.25);
 }
 
 .footer-nav ul {
@@ -137,7 +144,7 @@ footer {
   color: #ffd700;
 }
 
-/* ======== RESPONSIVE ======== */
+/* ======== RESPONSIVE HEADER & FOOTER ===== */
 @media (max-width: 900px) {
 
   .show-logos {
@@ -147,7 +154,7 @@ footer {
   }
 
   .show-logos li a img {
-    max-width: 220px; /* Se ajustan proporcionalmente */
+    max-width: 220px;
   }
 
   nav {
@@ -173,4 +180,129 @@ footer {
   padding: 17px 0;
   font-weight: 600;
   font-size: 17px;
+}
+
+/* ===========================
+   SECCIÓN CONTACTO FULLSCREEN
+=========================== */
+body {
+  padding-bottom: 80px; /* espacio para footer azul */
+  margin: 0;
+}
+
+.contacto-section {
+  width: 100%;
+  min-height: 100vh; /* pantalla completa */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  padding: 0 0 80px 0; /* deja espacio para footer */
+  box-sizing: border-box;
+}
+
+.contacto-circulo {
+  background: white;
+  width: 85vw;   
+  max-width: 700px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  padding: 50px;
+  box-shadow: 0 0 35px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contacto-circulo h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #2e2e2e;
+  font-weight: 700;
+}
+
+.contacto-form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contacto-form label {
+  font-weight: 600;
+  text-align: left;
+  font-size: 16px;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #62b1df;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+  resize: none;
+}
+
+.contacto-form textarea {
+  height: 120px;
+}
+
+.btn-enviar {
+  margin-top: 10px;
+  background: #62b1df;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.btn-enviar:hover {
+  background: #4ea1d3;
+  transform: scale(1.05);
+}
+
+.mensaje-gracias {
+  display: none;
+  margin-top: 20px;
+  color: #62b1df;
+  font-weight: 700;
+}
+
+/* RESPONSIVE CONTACTO */
+@media(max-width: 900px) {
+  .contacto-circulo {
+    width: 90vw;
+    height: 90vw;
+    padding: 30px;
+  }
+
+  .contacto-form {
+    max-width: 90%;
+  }
+
+  .contacto-form textarea {
+    height: 100px;
+  }
+}
+
+@media(max-width: 650px) {
+  .contacto-circulo {
+    width: 95vw;
+    height: auto;
+    border-radius: 30px;
+    padding: 25px;
+  }
+
+  .contacto-form textarea {
+    height: 90px;
+  }
 }
