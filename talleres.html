@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Talleres | PinaTeatre</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;800&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
   <style>
     body {
       margin: 0;
@@ -13,13 +16,12 @@
       background: #000;
       color: #fff;
       font-size: 18px;
-      position: relative;
     }
 
+    /* ===== CABECERA ===== */
     header {
       background: #62b1df;
-      padding: 18px;
-      text-align: center;
+      padding: 18px 0;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -29,22 +31,22 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
+      padding: 0 20px;
     }
 
-    .logo-header-img {
-      width: 50px;
-      height: 50px;
+    nav img {
+      width: 55px;
+      height: 55px;
       border-radius: 50%;
       object-fit: cover;
-      vertical-align: middle;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      gap: 20px;
+      gap: 25px;
       margin: 0;
       padding: 0;
     }
@@ -54,130 +56,125 @@
       text-decoration: none;
       font-weight: 700;
       font-size: 16px;
+      transition: 0.2s;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      opacity: 0.7;
     }
 
-    main {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 20px;
-      position: relative;
-      z-index: 1;
+    /* ===== LAYOUT CON FRANJAS ===== */
+    .layout {
+  max-width: 900px; /* límite estricto para que NO invada laterales */
+  margin: 40px auto;
+  padding: 20px;
+}
+
+    /* Eliminado pseudo-franjas */ {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 180px;
+      height: 100%;
+      background: #62b1df;
+      z-index: -1;
     }
 
-    /* ===== Talleres ===== */
+    
+    .layout::after { right: 0; }
+
+    /* ===== CONTENIDO ===== */
     .taller {
       display: flex;
       align-items: center;
-      gap: 30px;
-      margin-bottom: 60px;
+      gap: 40px;
+      margin-bottom: 70px;
       flex-wrap: wrap;
-      position: relative;
-      z-index: 2;
       padding: 20px 0;
     }
 
-    .taller.invertido {
+    .invertido {
       flex-direction: row-reverse;
     }
 
-    .taller .imagen, .taller .texto {
+    .imagen {
       flex: 1;
     }
 
-    .taller .imagen img {
+    .imagen img {
       width: 100%;
-      height: auto;
-      border-radius: 12px;
-      object-fit: cover;
-      transition: transform 0.3s;
+      border-radius: 14px;
+      transition: transform 0.3s ease;
     }
 
-    .taller .imagen img:hover {
-      transform: scale(1.05);
+    .imagen img:hover {
+      transform: scale(1.04);
     }
 
-    .taller .texto h2 {
+    .texto {
+      flex: 1;
+    }
+
+    h2 {
       color: #62b1df;
-      font-size: 2.3rem; /* más grande */
-      font-weight: 800;  /* casi negrita */
-      margin-bottom: 15px;
+      font-size: 2.4rem;
+      font-weight: 800;
+      margin-bottom: 18px;
       text-align: center;
     }
 
-    .taller .texto p {
+    p {
+      line-height: 1.55;
       margin-bottom: 12px;
-      line-height: 1.5;
-      text-align: justify;
     }
 
-    .taller .texto .meta {
+    .punchline {
+      font-weight: 700;
+      color: #62b1df;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .meta {
       font-size: 0.9rem;
       color: #aaa;
-      margin-bottom: 10px;
+      margin-bottom: 18px;
       text-align: center;
     }
 
-    .taller .texto .metodologia {
+    .metodologia {
       font-size: 0.95rem;
       color: #ccc;
       margin-top: 10px;
     }
 
-    .taller .texto .punchline {
-      font-size: 1rem;
-      color: #62b1df;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
-    .taller .texto .hashtags {
+    .hashtags {
       text-align: center;
       color: #62b1df;
       font-size: 0.95rem;
-      margin-top: 8px;
+      margin-top: 10px;
     }
 
-    /* ===== Franjas laterales azules sólidas ===== */
-    main::before, main::after {
-      content: "";
-      position: fixed;
-      top: 0;
-      width: 200px; /* más ancho */
-      height: 100%;
-      background: #62b1df;
-      z-index: 0;
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1100px) {
+      
     }
-
-    main::before { left: 0; }
-    main::after { right: 0; }
 
     @media (max-width: 900px) {
-      .taller, .taller.invertido {
+      .taller,
+      .invertido {
         flex-direction: column;
-      }
-
-      .taller .imagen, .taller .texto {
-        width: 100%;
-      }
-
-      main::before, main::after {
-        display: none;
+        text-align: center;
       }
     }
+
   </style>
 </head>
 <body>
 
 <header>
   <nav>
-    <a href="index.html">
-      <img src="imagenes/logo2.jpg" alt="Pina Teatre Logo" class="logo-header-img" />
-    </a>
+    <a href="index.html"><img src="imagenes/logo2.jpg" alt="Pina Teatre Logo"></a>
     <ul>
       <li><a href="index.html">Inicio</a></li>
       <li><a href="sobre.html">Sobre mí</a></li>
@@ -188,54 +185,54 @@
   </nav>
 </header>
 
-<main>
+<div class="layout">
 
-  <!-- Taller 1: Imaginación y Teatro -->
-  <div class="taller invertido">
+  <!-- Taller 1 -->
+  <section class="taller invertido">
     <div class="imagen">
-      <img src="imagenes/taller1.jpg" alt="Taller Imaginación y Teatro">
+      <img src="imagenes/taller1.jpg" alt="Taller Imaginación y Teatro" />
     </div>
     <div class="texto">
       <h2>Imaginación y Teatro</h2>
       <p class="punchline">Fomenta la creatividad y la expresión mediante ejercicios teatrales participativos.</p>
-      <p class="meta">Público: 6-12 años | Idioma: Castellano | Duración: variable según necesidad</p>
+      <p class="meta">Público: 6-12 años | Idioma: Castellano | Duración: variable</p>
       <p>Explora la imaginación de los niños y su capacidad para crear escenas mediante juegos teatrales. Se potencia la colaboración, comunicación y confianza grupal a través de actividades lúdicas y participativas.</p>
-      <p class="metodologia"><strong>Metodología:</strong> Calentamiento corporal y vocal, ejercicios de improvisación, creación escénica y puesta en común de escenas.</p>
-      <p class="hashtags">#Creatividad #Imaginación #ExpresiónCorporal #Colaboración #Confianza</p>
+      <p class="metodologia"><strong>Metodología:</strong> Calentamiento corporal y vocal, improvisaciones, creación escénica y muestra final.</p>
+      <p class="hashtags">#Creatividad #Imaginación #ExpresiónCorporal #Colaboración</p>
     </div>
-  </div>
+  </section>
 
-  <!-- Taller 2: Lectura en voz alta -->
-  <div class="taller">
+  <!-- Taller 2 -->
+  <section class="taller">
     <div class="imagen">
-      <img src="imagenes/taller2.jpg" alt="Taller Lectura en voz alta">
+      <img src="imagenes/taller2.jpg" alt="Taller Lectura en voz alta" />
     </div>
     <div class="texto">
-      <h2>Lectura en voz alta</h2>
+      <h2>Lectura en Voz Alta</h2>
       <p class="punchline">Desarrolla la comprensión lectora y la expresión oral mediante la lectura colectiva.</p>
-      <p class="meta">Público: 12-18 años | Idioma: Castellano / Valencià | Duración: variable según necesidad</p>
-      <p>Mejora la expresión oral, comprensión lectora y confianza escénica. Se practican lecturas individuales y grupales, fomentando la escucha activa y la interpretación compartida.</p>
-      <p class="metodologia"><strong>Metodología:</strong> Calentamiento vocal, lectura individual y en grupo, dramatizaciones y análisis de expresividad.</p>
-      <p class="hashtags">#LecturaEnVozAlta #Comprensión #ExpresiónOral #Empatía #Confianza #Educación</p>
+      <p class="meta">Público: 12-18 años | Idioma: Castellano / Valencià | Duración: variable</p>
+      <p>Mejora la expresión oral, comprensión lectora y confianza escénica a través de lecturas individuales y grupales, fomentando la escucha activa y la interpretación.</p>
+      <p class="metodologia"><strong>Metodología:</strong> Calentamiento vocal, lectura individual y grupal, dramatización de textos.</p>
+      <p class="hashtags">#LecturaEnVozAlta #ExpresiónOral #Interpretación #Educación</p>
     </div>
-  </div>
+  </section>
 
-  <!-- Taller 3: Poesía participativa -->
-  <div class="taller invertido">
+  <!-- Taller 3 -->
+  <section class="taller invertido">
     <div class="imagen">
-      <img src="imagenes/taller3.jpg" alt="Taller Poesía participativa">
+      <img src="imagenes/taller3.jpg" alt="Taller Poesía participativa" />
     </div>
     <div class="texto">
-      <h2>Poesía participativa</h2>
+      <h2>Poesía Participativa</h2>
       <p class="punchline">Explora la expresión personal y colectiva mediante la interpretación poética.</p>
-      <p class="meta">Público: Adultos y grupos diversos | Idioma: Castellano / English | Duración: variable según necesidad</p>
-      <p>Descubre la poesía mediante la recitación, interpretación y experimentación con ritmo, musicalidad y expresión corporal. Se fomenta la creatividad, colaboración y confianza escénica.</p>
-      <p class="metodologia"><strong>Metodología:</strong> Escucha activa, ejercicios de voz y cuerpo, actividades rítmicas y musicales, interpretación colectiva de poemas.</p>
-      <p class="hashtags">#Poesía #Expresión #Interpretación #Creatividad #Colaboración #ConfianzaEscénica</p>
+      <p class="meta">Público: Adultos y grupos diversos | Idioma: Castellano / English | Duración: variable</p>
+      <p>Descubre la poesía mediante la recitación, interpretación y experimentación con ritmo, musicalidad y expresión corporal. Ideal para dinamizar grupos y fomentar la creatividad.</p>
+      <p class="metodologia"><strong>Metodología:</strong> Ejercicios de voz y cuerpo, dinámicas rítmicas, interpretación colectiva de poemas.</p>
+      <p class="hashtags">#Poesía #Expresión #Creatividad #Interpretación</p>
     </div>
-  </div>
+  </section>
 
-</main>
+</div>
 
 </body>
 </html>
